@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    private let locationManager = CLLocationManager()
     
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
@@ -68,6 +71,7 @@ class ViewController: UIViewController {
         button.layer.masksToBounds = true
         button.setTitle("ИСПОЛЬЗОВАТЬ МЕСТОПОЛОЖЕНИЕ УСТРОЙСТВА", for: .normal)
         button.titleLabel?.font = UIFont(name: "Rubik-Medium", size: 12)
+        button.addTarget(self, action: #selector(myRequestWhenInUseAuthorization), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -77,6 +81,7 @@ class ViewController: UIViewController {
         button.setTitle("НЕТ, Я БУДУ ДОБАВЛЯТЬ ЛОКАЦИИ", for: .normal)
         button.contentHorizontalAlignment = .right
         button.titleLabel?.font = UIFont(name: "Rubik-Regular", size: 16)
+        button.addTarget(self, action: #selector(pushVC), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -84,6 +89,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        locationManager.delegate = self
     }
     
     private func setupUI() {
@@ -121,6 +127,22 @@ class ViewController: UIViewController {
             deniedLocationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
         ])
     }
-
+    
+    
+    @objc private func myRequestWhenInUseAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        pushVC()
+    }
+    
+    @objc private func pushVC() {
+        let vc = NewViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
+
+
 

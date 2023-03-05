@@ -15,6 +15,7 @@
 		1628332F29B423C700166DF6 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1628332C29B423C700166DF6 /* Rubik-Medium.ttf */; };
 		1628333029B423C700166DF6 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1628332D29B423C700166DF6 /* Rubik-SemiBold.ttf */; };
 		1628333129B423C700166DF6 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1628332E29B423C700166DF6 /* Rubik-Regular.ttf */; };
+		1628333329B430B500166DF6 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628333229B430B500166DF6 /* NewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1628332C29B423C700166DF6 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		1628332D29B423C700166DF6 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		1628332E29B423C700166DF6 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		1628333229B430B500166DF6 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1628331729B0C5C200166DF6 /* AppDelegate.swift */,
 				1628331929B0C5C200166DF6 /* SceneDelegate.swift */,
 				1628331B29B0C5C200166DF6 /* ViewController.swift */,
+				1628333229B430B500166DF6 /* NewViewController.swift */,
 				1628332029B0C5C500166DF6 /* Assets.xcassets */,
 				1628332229B0C5C500166DF6 /* LaunchScreen.storyboard */,
 				1628332529B0C5C500166DF6 /* Info.plist */,
@@ -157,6 +160,7 @@
 				1628331C29B0C5C200166DF6 /* ViewController.swift in Sources */,
 				1628331829B0C5C200166DF6 /* AppDelegate.swift in Sources */,
 				1628331A29B0C5C200166DF6 /* SceneDelegate.swift in Sources */,
+				1628333329B430B500166DF6 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 				DEVELOPMENT_TEAM = 82KQ5UJRH9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWeather/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Пожалуйста, разрешите доступ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -325,6 +330,7 @@
 				DEVELOPMENT_TEAM = 82KQ5UJRH9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWeather/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Пожалуйста, разрешите доступ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
